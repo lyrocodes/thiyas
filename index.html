@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)/index.html -->
+<html class="js sizes customelements history pointerevents postmessage postmessage-structuredclones webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Thiyas Higher Educational Institute</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png">
+
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <link rel="stylesheet" href="./animate.min.css">
+        <link rel="stylesheet" href="./meanmenu.css">
+        <link rel="stylesheet" href="./magnific-popup.css">
+        <link rel="stylesheet" href="./owl.carousel.min.css">
+        <link rel="stylesheet" href="./font-awesome.min.css">
+        <link rel="stylesheet" href="./et-line-icon.css">
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./ionicons.min.css">
+        <link rel="stylesheet" href="./material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./responsive.css">
+        <script src="./modernizr-3.11.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Header Area Start -->
+		<header class="top">
+			<div class="header-area header-sticky fixed sticky">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="logo">
+								<a href="/index.html"><img src="./thiyas logo.png" alt="eduhome"></a>
+							</div>
+						</div>
+						<div class="col-md-9">
+                            <div class="content-wrapper one">
+                                <!-- Main Menu Start -->
+                                <div class="main-menu one text-end">
+                                    <nav style="display: block;">
+                                        <ul>
+                                            <li><a href="/about.html">About</a></li>
+                                            <li><a href="/course.html">Classes</a>
+                                            </li>
+                                            <li><a href="/event.html">Events</a>
+                                            </li>
+                                            <li class="hidden-sm"><a href="/teacher.html">Teachers</a>
+                                            </li>
+                                            <li><a href="/contact.html">Contact Us</a></li>
+                                        </li></ul>
+                                    </nav>
+                                </div>
+                                <div class="mobile-menu one"></div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+        <style>
+            
+            #changing-sentence::after {
+                content: "|"; 
+                animation: blink 0.7s infinite alternate; 
+            }
+        
+            @keyframes blink {
+                to {
+                    opacity: 0;
+                }
+            }
+            .default-btn {
+        opacity: 0; 
+        transform: translateY(20px); 
+        transition: opacity 0.5s ease, transform 0.5s ease; 
+    }
+
+    .default-btn.show {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+        </style>
+        <section id="slider-container" class="slider-area">
+            <div class="slider-owl owl-carousel">
+                <div class="single-slide" style="background-image: url(./slide1.jpg);">
+                    <div class="slider-content-area">   
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="slide-content-wrapper">
+                                        <div class="slide-content">
+                                            <h3 id="changing-sentence"></h3>
+                                            <br><br>
+                                            <a id="btnAbout" class="default-btn" href="/about.html">ඔබ අපේ වත්කමයි</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            
+            const sentence = "අපි ඔබේ සාර්ථකත්වයට උර දෙන්නෙමු...";
+        
+            
+            function typeAndLoop() {
+                const changingSentence = document.getElementById('changing-sentence');
+        
+                function type() {
+                    let index = 0;
+                    const typingInterval = setInterval(() => {
+                        if (index <= sentence.length) {
+                            changingSentence.textContent = sentence.substring(0, index);
+                            index++;
+                        } else {
+                            clearInterval(typingInterval); 
+                            setTimeout(erase, 10000); 
+                        }
+                    }, 100); 
+                }
+        
+                function erase() {
+                    let index = sentence.length;
+                    const erasingInterval = setInterval(() => {
+                        if (index >= 0) {
+                            changingSentence.textContent = sentence.substring(0, index);
+                            index--;
+                        } else {
+                            clearInterval(erasingInterval); 
+                            setTimeout(type, 1000); 
+                        }
+                    }, 50); 
+                }
+        
+                
+                type();
+            }
+        
+            
+            typeAndLoop();
+            
+    const button = document.getElementById('btnAbout');
+
+
+            button.classList.add('show');
+        </script>
+        <section class="notice-area pt-150 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="notice-left" tabindex="1" style="overflow: hidden; outline: none;">
+                            <h3>notice board</h3>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>22, April 2024</h4>
+                                <p>Notice1 </p>
+                            </div>
+                            <!-- <div class="single-notice-left mb-25 pb-25">
+                                <h4>4, June 2022</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left pb-75">
+                                <h4>3, June 2022</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>5, June 2022</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>4, June 2022</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left pb-70">
+                                <h4>3, June 2022</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>5, June 2022</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left mb-25 pb-25">
+                                <h4>4, June 2022</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div>
+                            <div class="single-notice-left pb-70">
+                                <h4>3, June 2022</h4>
+                                <p>I must explain to you how all this mistaken idea of denouncing plasure and praising pain was born and I will give you a complete </p>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="notice-right">
+                            <div class="single-notice-right mb-25 pb-25">
+                                <h3>PROFESSIONAL TEACHER</h3>
+                                <p>Description1 </p>
+                            </div> 
+                            <div class="single-notice-right mb-25 pb-25">
+                                <h3>Online courses</h3>
+                                <p>Description2 </p>
+                            </div> 
+                            <div class="single-notice-right">
+                                <h3>easy to addmission</h3>
+                                <p>Description3 </p>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Notice End -->
+        <!-- Choose Start -->
+        <section class="choose-area pb-85 pt-77">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-left-4">
+                        <div class="choose-content text-start">
+                            <h2>why you choose thiyas</h2>
+                            <p>description </p>
+                            <p class="choose-option">description2 </p>
+                            <a class="default-btn" href="/course-details.html">View Classes</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Choose Area End -->
+        <!-- Courses Area Start -->
+        <div class="courses-area pt-150 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <img src="./section.png" alt="section-title">
+                            <h2>CLASSES</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-course">
+                            <div class="course-img">
+                                <a href="/course-details.html"><img src="./course1.jpg" alt="course">
+                                    <div class="course-hover">
+                                        <i class="fa fa-link"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-content">
+                                <h3><a href="/course-details.html">Subject1</a></h3>
+                                <p>Description1</p>
+                                <a class="default-btn" href="/course-details.html">read more</a>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-course">
+                            <div class="course-img">
+                                <a href="/course-details.html"><img src="./course2.jpg" alt="course">
+                                    <div class="course-hover">
+                                        <i class="fa fa-link"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-content">
+                                <h3><a href="/course-details.html">Subject2</a></h3>
+                                <p>Description2</p>
+                                <a class="default-btn" href="/course-details.html">read more</a>
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-course mb-0">
+                            <div class="course-img">
+                                <a href="/course-details.html"><img src="./course3.jpg" alt="course">
+                                    <div class="course-hover">
+                                        <i class="fa fa-link"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="course-content">
+                                <h3><a href="/course-details.html">Subject3</a></h3>
+                                <p>Description3</p>
+                                <a class="default-btn" href="/course-details.html">read more</a>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Courses Area End -->
+        <!-- Event Area Start -->
+        <div class="event-area one text-center pt-140 pb-150">
+            <div class="container">
+                <div class="row">
+                     <div class="col-12">
+                        <div class="section-title">
+                            <img src="./section.png" alt="section-title">
+                            <h2>EVENTS</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-lg-6">
+                        <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a href="/event-details.html">20 <span>June</span></a></h3>
+                            </div>
+                            <div class="event-content text-start">
+                                <div class="event-content-left">
+                                    <h4><a href="/event-details.html">MICRO BIOLOGICAL WORKSHOP</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
+                                        <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="/event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a href="/event-details.html">18 <span>June</span></a></h3>
+                            </div>
+                            <div class="event-content text-start">
+                                <div class="event-content-left">
+                                    <h4><a href="/event-details.html">ADVANCE PHP WORKSHOP</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
+                                        <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="/event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a href="/event-details.html">16 <span>June</span></a></h3>
+                            </div>
+                            <div class="event-content text-start">
+                                <div class="event-content-left">
+                                    <h4><a href="/event-details.html">LEARN ENGLISH HISTORY</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
+                                        <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="/event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-event">
+                            <div class="event-date">
+                                <h3><a href="/event-details.html">14 <span>June</span></a></h3>
+                            </div>
+                            <div class="event-content text-start">
+                                <div class="event-content-left">
+                                    <h4><a href="/event-details.html">GLOBAL ECONOMIC CONFERENCE</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
+                                        <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="/event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-5 pt-lg-0">
+                        <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a href="/event-details.html">12 <span>June</span></a></h3>
+                            </div>
+                            <div class="event-content text-start">
+                                <div class="event-content-left">
+                                    <h4><a href="/event-details.html">MATHEMATICAL WORKSHOP</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
+                                        <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="/event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a href="/event-details.html">10 <span>June</span></a></h3>
+                            </div>
+                            <div class="event-content text-start">
+                                <div class="event-content-left">
+                                    <h4><a href="/event-details.html">WORDPRESS AUTHOR MEET UP</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
+                                        <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="/event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-event mb-35">
+                            <div class="event-date">
+                                <h3><a href="/event-details.html">08 <span>June</span></a></h3>
+                            </div>
+                            <div class="event-content text-start">
+                                <div class="event-content-left">
+                                    <h4><a href="/event-details.html">DIGITAL MARKETING ANALYSIS</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
+                                        <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="/event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="single-event">
+                            <div class="event-date">
+                                <h3><a href="/event-details.html">06 <span>June</span></a></h3>
+                            </div>
+                            <div class="event-content text-start">
+                                <div class="event-content-left">
+                                    <h4><a href="/event-details.html">WROKSHOP ON UI &amp; UX</a></h4>
+                                    <ul>
+                                        <li><i class="fa fa-clock-o"></i>9.00 AM - 4.45 PM</li>
+                                        <li><i class="fa fa-map-marker"></i>New Yourk City</li>
+                                    </ul>
+                                </div>
+                                <div class="event-content-right">
+                                    <a class="default-btn" href="/event-details.html">join now</a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Area End -->
+        <!-- Testimonial Area Start -->
+        <div class="testimonial-area pt-110 pb-105 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="testimonial-owl owl-theme owl-carousel owl-loaded owl-drag">
+                         
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2370px, 0px, 0px); transition: all 0s ease 0s; width: 5925px;"><div class="owl-item cloned" style="width: 1185px;"><div class="col-lg-8 offset-lg-2">
+                            <div class="single-testimonial">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="./testimonial.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>Comment</p>
+                                        <h4>Name</h4>
+                                        <h5>Student</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1185px;"><div class="col-lg-8 offset-lg-2">
+                            <div class="single-testimonial">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="./testimonial.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>Comment2</p>
+                                        <h4>Name2</h4>
+                                        <h5>Student2</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item active" style="width: 1185px;"><div class="col-lg-8 offset-lg-2">
+                            <div class="single-testimonial">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="./testimonial.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>Comment3</p>
+                                        <h4>Name3</h4>
+                                        <h5>Student3</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1185px;"><div class="col-lg-8 offset-lg-2">
+                            <div class="single-testimonial">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="./testimonial.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>Comment4</p>
+                                        <h4>Name4</h4>
+                                        <h5>Student4</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1185px;"><div class="col-lg-8 offset-lg-2">
+                            <div class="single-testimonial">
+                                <div class="testimonial-info">
+                                    <div class="testimonial-img">
+                                        <img src="./testimonial.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>Comment5</p>
+                                        <h4>Name5</h4>
+                                        <h5>Student5</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial Area End -->
+        <!-- Blog Area Start -->
+        
+        <!-- Footer Start -->
+        <footer class="footer-area">
+            <div class="main-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-widget pr-60">
+                                <div class="footer-logo pb-25">
+                                    <a href="/index.html"><img src="./footer-logo.png" alt="eduhome"></a>
+                                </div>
+                                <p>descriptionFooter </p>
+                                <div class="footer-social">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/devitems/?ref=bookmarks"><i class="zmdi zmdi-facebook"></i></a></li>
+                                        <li><a href="https://www.pinterest.com/devitemsllc/"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                        <li><a href="/index.html#"><i class="zmdi zmdi-vimeo"></i></a></li>
+                                        <li><a href="https://twitter.com/devitemsllc"><i class="zmdi zmdi-twitter"></i></a></li>
+                                    </ul>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single-widget">
+                                <h3>information</h3>
+                                <ul>
+                                    <li><a href="/index.html#">addmission</a></li>
+                                    <li><a href="/index.html#">Academic Calender</a></li>
+                                    <li><a href="/event.html">Event List</a></li>
+                                    <li><a href="/index.html#">Hostel &amp; Dinning</a></li>
+                                    <li><a href="/index.html#">TimeTable</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 pt-4 pt-lg-0">
+                            <div class="single-widget">
+                                <h3>useful links</h3>
+                                <ul>
+                                    <li><a href="/course.html">Facebook</a></li>
+                                    <li><a href="/about.html">Whatsapp</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 pt-4 pt-lg-0">
+                            <div class="single-widget">
+                                <h3>get in touch</h3>
+                                <p>Your address goes here, Street<br>City, Roadno 785 New York</p>
+                                <p>no<br>no1</p>
+                                <p>mail<br>site</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="footer-bottom text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Copyright © <a href="/index.html">Thiyas.lk</a> 2024. All Right Reserved By <a href="https://www.facebook.com/UdithaManohara9/" target="_blank">Uditha Manohara (LyroCodes)</a></p>
+                        </div> 
+                    </div>
+                </div>    
+            </div>
+        </footer>
+        <!-- Footer End -->
+
+        <script src="./jquery-3.6.0.min.js"></script>
+        <script src="./jquery-migrate-3.3.2.min.js"></script>
+        <script src="./bootstrap.bundle.min.js"></script>
+        <script src="./jquery.meanmenu.js"></script>
+        <script src="./jquery.magnific-popup.js"></script>
+        <script src="./ajax-mail.js"></script>
+        <script src="./owl.carousel.min.js"></script>
+        <script src="./jquery.mb.YTPlayer.js"></script>
+        <script src="./jquery.nicescroll.min.js"></script>
+        <script src="./plugins.js"></script>
+        <script src="./main.js"></script><a id="scrollUp" href="/index.html#top" style="position: fixed; z-index: 2147483647;"><i class="fa fa-angle-up"></i></a>
+    
+
+</body></html>
